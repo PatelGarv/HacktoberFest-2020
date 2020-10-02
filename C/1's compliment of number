@@ -1,0 +1,37 @@
+//author : Garv Patel
+
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int n,a,i,l,j;
+	char decimal[64];
+
+	printf("Enter Decinal number:\n");
+	scanf("%d",&a);
+	n = a;
+	
+	for(i=0;n>0;i++)
+	{
+		decimal[i] = n%2;
+		n = n/2;
+	}	
+	
+	for(j=0;j<=i;j++)
+	{
+		if(decimal[j]==1)
+		{
+			decimal[j] = 0;
+		}else{
+			decimal[j] = 1;
+		}
+	}
+	
+	printf("Your 1's comliment is :\n");
+	
+	for (i=i-1;i>=0;i--)
+	{
+		printf("%d",decimal[i]);
+	}
+}
